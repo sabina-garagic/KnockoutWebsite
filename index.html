@@ -2,11 +2,12 @@
 <html>
   <head>
     <title>First wesite</title>
-    <script src="./index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <script src="./index.js" defer="defer"></script>
   </head>
   <body>
-    <p>Hello <span id="user-name">world</span>!</p>
-    <input id="user-name-input" />
-    <button id="change-name-btn">Change Name</button>
+    <p>Hello <span id="user-name" data-bind="text: userName"></span>!</p>
+    <input id="user-name-input" data-bind="value: userNameInput" />
+    <button id="change-name-btn" data-bind="click: changeName">Change Name</button>
   </body>
 </html>
