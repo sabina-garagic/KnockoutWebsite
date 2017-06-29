@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>First wesite</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
-    <script src="./index.js" defer="defer"></script>
-  </head>
-  <body>
-    <p>Hello <span id="user-name" data-bind="text: userName"></span>!</p>
-    <input id="user-name-input" data-bind="value: userNameInput" />
-    <button id="change-name-btn" data-bind="click: changeName">Change Name</button>
-  </body>
+
+<head>
+  <title>First wesite</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+  <script src="./index.js" defer="defer"></script>
+  <link rel="stylesheet" type="text/css" href="./style.css">  
+</head>
+
+<body>
+  <table id="recipe-list">
+    <thead>
+      <tr>
+        <th>Recipe Name</th>      
+        <th>Instructions</th>
+      </tr>
+    </thead>
+    <tbody data-bind="foreach: recipes">
+      <tr>
+        <td data-bind="text: name"></td>
+        <td data-bind="text: instructions"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
 </html>
