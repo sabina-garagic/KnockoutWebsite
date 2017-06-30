@@ -18,11 +18,20 @@
     </thead>
     <tbody data-bind="foreach: recipes">
       <tr>
-        <td data-bind="text: name"></td>
-        <td data-bind="text: instructions"></td>
+        <td><input type="text" data-bind="value: name"/></td>
+        <td><input type="text" data-bind="value: instructions"/></td>
+        <td><button data-bind="click: $parent.deleteRecipe">Delete</button></td>
+        <td><button data-bind="click: $parent.updateRecipe">Update</button></td>
       </tr>
     </tbody>
-  </table>
+  </table><br><br>
+  <div>
+    <label>Recipe Name</label><br>
+    <input type="text" data-bind="value: recipeName"/><br>
+    <label>Instructions</label><br>
+    <input type="text" data-bind="value: recipeInstructions"/><br><br>
+    <button data-bind="click: addRecipe">Add new recipe</button>
+  </div>
 </body>
 
 </html>
